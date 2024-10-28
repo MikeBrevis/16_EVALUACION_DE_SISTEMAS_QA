@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h2>Calculadora sencilla</h2>
+    <form action="/calculate" method="post">
+      <input
+        type="text"
+        name="num1"
+        placeholder="Ingrese primer número"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        name="num2"
+        placeholder="Ingrese segundo número"
+        required
+      /><br /><br />
+      <select name="operator">
+        <option value="sumar">Suma</option>
+        <option value="restar">Resta</option>
+        <option value="multiplicar">Multiplica</option>
+        <option value="dividir">Divide</option></select
+      ><br /><br />
+      <input type="submit" value="Calcular" />
+    </form>
+    {% if result %}
+    <h2>Resultado:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+  </body>
+</html>
